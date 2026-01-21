@@ -4,11 +4,17 @@
     "description": "React frontend for FF-Likes API - Send likes to Free Fire profiles",
     "private": true,
     "dependencies": {
+        "@babel/plugin-transform-optional-chaining": "^7.28.6",
+        "@babel/plugin-transform-private-methods": "^7.28.6",
+        "@babel/plugin-transform-private-property-in-object": "^7.28.6",
         "axios": "^1.6.2",
+        "eslint": "^9.39.2",
         "lucide-react": "^0.562.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-router-dom": "^6.20.0"
+        "react-router-dom": "^6.20.0",
+        "source-map": "^0.7.6",
+        "svgo": "^4.0.0"
     },
     "scripts": {
         "start": "react-scripts start",
