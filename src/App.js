@@ -4,6 +4,11 @@ import { Gamepad2, Send, BarChart3, Calendar, Instagram, Crown } from 'lucide-re
 import LikeSender from './components/LikeSender';
 import Dashboard from './components/Dashboard';
 import DailyStats from './components/DailyStats';
+import AdminLogin from './components/Admin/AdminLogin';
+import AdminLayout from './components/Admin/AdminLayout';
+import AdminDashboard from './components/Admin/Dashboard';
+import AccountManagement from './components/Admin/AccountManagement';
+import TokenManagement from './components/Admin/TokenManagement';
 import './App.css';
 
 function App() {
@@ -78,6 +83,14 @@ function App() {
                         <Route path="/" element={<LikeSender />} />
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/daily-stats" element={<DailyStats />} />
+
+                        {/* Admin Routes */}
+                        <Route path="/admin/login" element={<AdminLogin />} />
+                        <Route path="/admin" element={<AdminLayout />}>
+                            <Route path="dashboard" element={<AdminDashboard />} />
+                            <Route path="accounts" element={<AccountManagement />} />
+                            <Route path="tokens" element={<TokenManagement />} />
+                        </Route>
                     </Routes>
                 </main>
 
