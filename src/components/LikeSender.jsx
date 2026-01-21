@@ -10,9 +10,7 @@ import {
     CheckCircle2,
     XCircle,
     TrendingUp,
-    BarChart3,
-    Clock,
-    RefreshCw
+    BarChart3
 } from 'lucide-react';
 import './LikeSender.css';
 import './IconAnimations.css';

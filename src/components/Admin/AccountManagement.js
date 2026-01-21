@@ -4,7 +4,7 @@ import './AccountManagement.css';
 
 const AccountManagement = () => {
     const [accounts, setAccounts] = useState([]);
-    const [servers, setServers] = useState([]);
+    // Removed unused 'servers' state
     const [selectedServer, setSelectedServer] = useState('');
     const [loading, setLoading] = useState(true);
     const [showAddModal, setShowAddModal] = useState(false);
@@ -16,25 +16,24 @@ const AccountManagement = () => {
         account_id: 1
     });
 
-    useEffect(() => {
-        fetchData();
-    }, [selectedServer]);
-
     const fetchData = async () => {
         setLoading(true);
         try {
-            const [accountsRes, serversRes] = await Promise.all([
-                accountService.getAll(selectedServer),
-                serverService.getAll()
+            const [accountsRes] = await Promise.all([
+                accountService.getAll(selectedServer)
+                // Removed serverService.getAll() and setServers
             ]);
             setAccounts(accountsRes.data);
-            setServers(serversRes.data);
         } catch (err) {
             console.error('Failed to fetch data:', err);
         } finally {
             setLoading(false);
         }
     };
+
+    useEffect(() => {
+        fetchData();
+    }, [selectedServer, fetchData]);
 
     const handleAddAccount = async (e) => {
         e.preventDefault();
