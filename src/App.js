@@ -12,7 +12,7 @@ import TokenManagement from './components/Admin/TokenManagement';
 import './App.css';
 
 function App() {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen]  = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
