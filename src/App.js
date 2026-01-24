@@ -25,7 +25,7 @@ function App() {
     return (
         <Router>
             <div className="app">
-                {/* Animated Background */}
+                {/* Animated  Background */}
                 <div className="background-animation">
                     <div className="gradient-orb orb-1"></div>
                     <div className="gradient-orb orb-2"></div>
